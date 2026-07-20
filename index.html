@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Студия VSCL</title>
+  <meta name="description" content="VSCL — выездные видеотрансляции в Красноярске. Мультикамерная съёмка, стриминг, студийная графика.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <nav class="nav" id="nav" role="navigation" aria-label="Главная навигация">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" aria-label="VSCL — На главную">
+        <img src="img/logo.png" alt="VSCL" class="nav-logo-img">
+        <span>Студия VSCL</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#packages">Пакеты</a></li>
+        <li><a href="#portfolio">Портфолио</a></li>
+        <li><a href="#equipment">Оборудование</a></li>
+        <li><a href="#graphics">Графика</a></li>
+        <li><a href="#team">Команда</a></li>
+        <li><a href="#contact" class="nav-cta">Связаться</a></li>
+      </ul>
+
+      <button class="nav-hamburger" id="hamburger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="nav-mobile" id="mobileMenu" role="dialog" aria-label="Мобильное меню">
+      <a href="#services">Услуги</a>
+      <a href="#packages">Пакеты</a>
+      <a href="#portfolio">Портфолио</a>
+      <a href="#equipment">Оборудование</a>
+      <a href="#graphics">Графика</a>
+      <a href="#team">Команда</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Связаться</a>
+    </div>
+  </nav>
+
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <video class="hero-video" autoplay muted loop playsinline poster="img/hero-poster.png">
+        <source src="video/hero-bg.mp4" type="video/mp4">
+        <source src="video/hero-bg.webm" type="video/webm">
+      </video>
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-orb hero-orb-3"></div>
+      <div class="hero-particles" id="particles"></div>
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Красноярск и Красноярский край
+        </div>
+
+        <h1 class="hero-title">
+          Трансляции, которые <span class="highlight">впечатляют</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Профессиональная организация прямых эфиров любой сложности — от спортивных событий до корпоративных мероприятий. Мультикамерная съёмка, студийная графика, безупречный звук.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#packages" class="btn-primary">
+            Смотреть пакеты
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#portfolio" class="btn-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Примеры работ
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-number" data-count="300">0</div>
+            <div class="hero-stat-label">трансляций</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number" data-count="7">0</div>
+            <div class="hero-stat-label">лет на рынке</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number" data-count="10">0</div>
+            <div class="hero-stat-label">площадок в год</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Наши возможности</div>
+        <h2 class="section-title">Всё для идеального эфира</h2>
+        <p class="section-subtitle">Полный цикл производства прямых трансляций — от подготовки до финального сигнала</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-icon"><span>🎥</span></div>
+          <h3>Мультикамерная съёмка</h3>
+          <p>От 2 до 6+ камер Panasonic AG-CX10 с профессиональными операторами для кинематографичной картинки</p>
+        </div>
+
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-icon"><span>📡</span></div>
+          <h3>Стриминг на платформы</h3>
+          <p>Одновременная трансляция на YouTube, VK Video, Rutube и другие платформы с минимальной задержкой</p>
+        </div>
+
+        <div class="service-card reveal reveal-delay-3">
+          <div class="service-icon"><span>🎨</span></div>
+          <h3>Студийная графика</h3>
+          <p>Информационные плашки, счётчики, нижние трети, заставки и переходы в фирменном стиле</p>
+        </div>
+
+        <div class="service-card reveal reveal-delay-4">
+          <div class="service-icon"><span>🎙️</span></div>
+          <h3>Профессиональный звук</h3>
+          <p>Беспроводные системы Phenyx Pro PTU7000, петличные и ручные микрофоны Audio-Technica</p>
+        </div>
+
+        <div class="service-card reveal reveal-delay-5">
+          <div class="service-icon"><span>🎬</span></div>
+          <h3>Режиссура эфира</h3>
+          <p>Опытный режиссёр управляет переключением камер, графикой и звуком в реальном времени</p>
+        </div>
+
+        <div class="service-card reveal reveal-delay-6">
+          <div class="service-icon"><span>📍</span></div>
+          <h3>Выезд по всему краю</h3>
+          <p>Работаем в любой точке Красноярска и Красноярского края. Привозим всё оборудование с собой</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section packages" id="packages">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Тарифы</div>
+        <h2 class="section-title">Выберите свой формат</h2>
+        <p class="section-subtitle">Прозрачное ценообразование без скрытых доплат. Каждый пакет адаптируется под вашу задачу</p>
+      </div>
+
+      <div class="packages-grid">
+        <div class="package-card reveal reveal-delay-1">
+          <div class="package-name">Старт</div>
+          <div class="package-price">25 000 ₽ <span>/ эфир</span></div>
+          <div class="package-period">Идеально для небольших событий</div>
+          <ul class="package-features">
+            <li>2 камеры</li>
+            <li>Режиссёр-оператор</li>
+            <li>Стриминг на 1 платформу</li>
+            <li>Базовая графика</li>
+            <li>Звук с площадки</li>
+          </ul>
+          <a href="#contact" class="package-btn package-btn-outline">Выбрать</a>
+        </div>
+
+        <div class="package-card popular reveal reveal-delay-2">
+          <div class="package-badge">Популярный</div>
+          <div class="package-name">Про</div>
+          <div class="package-price">50 000 ₽ <span>/ эфир</span></div>
+          <div class="package-period">Оптимальный выбор для большинства</div>
+          <ul class="package-features">
+            <li>4 камеры</li>
+            <li>Режиссёр + 2 оператора</li>
+            <li>Все платформы</li>
+            <li>Полная графика</li>
+            <li>Запись эфира</li>
+            <li>Профессиональный звук</li>
+            <li>Комментаторская позиция</li>
+          </ul>
+          <a href="#contact" class="package-btn package-btn-filled">Выбрать</a>
+        </div>
+
+        <div class="package-card reveal reveal-delay-3">
+          <div class="package-name">Премиум</div>
+          <div class="package-price">100 000 ₽ <span>/ эфир</span></div>
+          <div class="package-period">Максимум возможностей</div>
+          <ul class="package-features">
+            <li>4–6 камер</li>
+            <li>Полный экипаж (режиссёр, 3+ операторов)</li>
+            <li>Студийная графика</li>
+            <li>Запись эфира</li>
+            <li>Мультиплатформенный стриминг</li>
+          </ul>
+          <a href="#contact" class="package-btn package-btn-outline">Выбрать</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section portfolio" id="portfolio">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Портфолио</div>
+        <h2 class="section-title">Примеры трансляций</h2>
+        <p class="section-subtitle">Реальные проекты, которые мы реализовали для наших клиентов</p>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-card reveal reveal-delay-1">
+          <div class="portfolio-video">
+            <iframe src="https://vk.com/video_ext.php?oid=-4232322&id=456239782&autoplay=1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-tag">Киберспорт</span>
+            <h3>Кубок главы города Красноярска по компьютерному спорту</h3>
+            <p>Мультикамерная трансляция финала с комментаторами, кадрами со сцены, полным пакетом графики и повторами</p>
+            <div class="portfolio-meta">
+              <span>🎥 4 камеры</span>
+              <span>⏱ 10 часов</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal reveal-delay-2">
+          <div class="portfolio-video">
+            <iframe src="https://vkvideo.ru/video_ext.php?oid=-231539715&id=456239071&hash=b66631a072f78078&autoplay=1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-tag">Спорт</span>
+            <h3>УниверЛига Мультистрим</h3>
+            <p>Студенческая спортивная лига с одновременной трансляцией на несколько платформ</p>
+            <div class="portfolio-meta">
+              <span>🎥 2 камеры</span>
+              <span>⏱ 10 часов</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal reveal-delay-3">
+          <div class="portfolio-video">
+            <iframe src="https://vkvideo.ru/video_ext.php?oid=-13854777&id=456243488&hash=fce771e0b42e991d&autoplay=1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-tag">Культура</span>
+            <h3>Арт | Российская студенческая весна | Красноярск'26</h3>
+            <p>Творческий фестиваль с художественной съёмкой и атмосферной графикой</p>
+            <div class="portfolio-meta">
+              <span>🎥 2 камеры</span>
+              <span>⏱ 4 часа</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section equipment" id="equipment">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Техника</div>
+        <h2 class="section-title">Техника мирового уровня</h2>
+        <p class="section-subtitle">Используем профессиональное оборудование, которому доверяют ведущие телеканалы</p>
+      </div>
+
+      <div class="equipment-layout">
+        <div class="equipment-image reveal-left">
+          <div class="equipment-image-inner">
+            <img src="img/tech/camera.png" alt="Panasonic AG-CX10">
+          </div>
+          <div class="equipment-image-badge">Panasonic AG-CX10</div>
+        </div>
+
+        <div class="equipment-list reveal-right">
+          <div class="equipment-item">
+            <div class="equipment-item-icon">
+              <img src="img/tech/camera.png" alt="Камеры">
+            </div>
+            <div>
+              <h4>Камеры</h4>
+              <p>Panasonic AG-CX10, Olympus E-M5 Mark II — 4K-съёмка с превосходной цветопередачей</p>
+            </div>
+          </div>
+
+          <div class="equipment-item">
+            <div class="equipment-item-icon">
+              <img src="img/tech/mixer.png" alt="Видеомикшеры">
+            </div>
+            <div>
+              <h4>Видеомикшеры</h4>
+              <p>AVMATRIX VS0601U — аппаратное переключение до 6 источников в реальном времени</p>
+            </div>
+          </div>
+
+          <div class="equipment-item">
+            <div class="equipment-item-icon">
+              <img src="img/tech/mic.png" alt="Звук">
+            </div>
+            <div>
+              <h4>Звук</h4>
+              <p>Audio-Technica, Phenyx PRO PTU7000 — беспроводные системы профессионального уровня</p>
+            </div>
+          </div>
+
+          <div class="equipment-item">
+            <div class="equipment-item-icon">
+              <img src="img/tech/network.png" alt="Каналы связи">
+            </div>
+            <div>
+              <h4>Каналы связи</h4>
+              <p>Собственный рестрим-сервер, интерком для координации команды в реальном времени</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section graphics" id="graphics">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label" style="color: var(--color-accent-light);">Оформление</div>
+        <h2 class="section-title">Визуальное оформление эфира</h2>
+        <p class="section-subtitle">Создаём графику, которая делает трансляцию узнаваемой и профессиональной</p>
+      </div>
+
+      <div class="graphics-grid">
+        <div class="graphics-card reveal reveal-delay-1">
+          <div class="graphics-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="18" width="18" height="4" rx="1" />
+              <path d="M3 15h18" />
+              <path d="M3 12h18" />
+              <path d="M3 9h18" />
+            </svg>
+          </div>
+          <h3>Lower Thirds</h3>
+          <p>Информационные плашки с именами спикеров, титрами и контекстной информацией</p>
+        </div>
+
+        <div class="graphics-card reveal reveal-delay-2">
+          <div class="graphics-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20h8" />
+              <path d="M12 16h6" />
+              <path d="M12 12h4" />
+              <path d="M12 8h2" />
+              <path d="M3 20h4" />
+              <path d="M3 16h2" />
+              <path d="M3 12h2" />
+              <path d="M3 8h2" />
+            </svg>
+          </div>
+          <h3>Инфографика и счётчики</h3>
+          <p>Табло, статистика, таймеры и интерактивные элементы в реальном времени</p>
+        </div>
+
+        <div class="graphics-card reveal reveal-delay-3">
+          <div class="graphics-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8z" />
+              <path d="M12 12l2 2 4-4" />
+              <path d="M12 12l-2-2-4 4" />
+            </svg>
+          </div>
+          <h3>Заставки и переходы</h3>
+          <p>Анимированные перебивки, заставки начала и окончания эфира, рекламные блоки</p>
+        </div>
+
+        <div class="graphics-card reveal reveal-delay-4">
+          <div class="graphics-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 10h18" />
+              <path d="M3 14h18" />
+              <path d="M3 18h18" />
+              <path d="M3 6h18" />
+              <path d="M9 3v18" />
+              <path d="M15 3v18" />
+            </svg>
+          </div>
+          <h3>Виртуальная студия</h3>
+          <p>Полноценное виртуальное окружение для студийных форматов и подкастов</p>
+        </div>
+      </div>
+
+      <div class="graphics-mockup reveal-scale">
+        <div class="mockup-screen">
+          <div class="mockup-live">
+            <span class="mockup-live-dot"></span>
+            LIVE
+          </div>
+          <div class="mockup-scoreboard">
+            <span>КОМАНДА А</span>
+            <span class="mockup-score">3 : 2</span>
+            <span>КОМАНДА Б</span>
+          </div>
+          <div class="mockup-lower-third">
+            <div class="mockup-lt-name">Дмитрий Старчевский</div>
+            <div class="mockup-lt-title">Организатор · Прямой эфир</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section team" id="team">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Команда</div>
+        <h2 class="section-title">Люди, которые делают эфир</h2>
+        <p class="section-subtitle">Профессионалы с многолетним опытом в телевизионном производстве</p>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-card reveal reveal-delay-1">
+          <div class="team-avatar">
+            <img src="img/team/ceo_img.png" alt="Дмитрий Старчевский">
+          </div>
+          <h3>Дмитрий Старчевский</h3>
+          <div class="team-role">СЕО</div>
+          <div class="team-desc">10+ лет в телевизионном производстве. Стратегия и развитие</div>
+        </div>
+
+        <div class="team-card reveal reveal-delay-2">
+          <div class="team-avatar">
+            <img src="img/team/cco_img.png" alt="Дмитрий Еремин">
+          </div>
+          <h3>Дмитрий Еремин</h3>
+          <div class="team-role">CCO</div>
+          <div class="team-desc">Переговоры и договоры. Выстраивание партнёрских отношений</div>
+        </div>
+
+        <div class="team-card reveal reveal-delay-3">
+          <div class="team-avatar">
+            <img src="img/team/rej_img.png" alt="Владимир Гончаров">
+          </div>
+          <h3>Владимир Гончаров</h3>
+          <div class="team-role">Режиссёр трансляций</div>
+          <div class="team-desc">100+ трансляций. Мастер живого эфира и многокамерной режиссуры</div>
+        </div>
+
+        <div class="team-card reveal reveal-delay-4">
+          <div class="team-avatar">
+            <img src="img/team/tech_img.png" alt="Вадим Бурлай">
+          </div>
+          <h3>Вадим Бурлай</h3>
+          <div class="team-role">Технический специалист</div>
+          <div class="team-desc">Настройка оборудования, стриминг и техническое обеспечение</div>
+        </div>
+
+        <div class="team-card reveal reveal-delay-5">
+          <div class="team-avatar">
+            <img src="img/team/camera_img.png" alt="Данила Туриченко">
+          </div>
+          <h3>Данила Туриченко</h3>
+          <div class="team-role">Оператор-постановщик</div>
+          <div class="team-desc">Кинематографичная картинка и работа со светом</div>
+        </div>
+
+        <div class="team-card reveal reveal-delay-6">
+          <div class="team-avatar">
+            <img src="img/team/manager_img.png" alt="Артем Китель">
+          </div>
+          <h3>Артем Китель</h3>
+          <div class="team-role">Менеджер проектов</div>
+          <div class="team-desc">Координация проектов, логистика и клиентский сервис</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section process" id="process">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Как мы работаем</div>
+        <h2 class="section-title">От заявки до эфира</h2>
+        <p class="section-subtitle">Четыре простых шага к безупречной трансляции вашего события</p>
+      </div>
+
+      <div class="process-steps">
+        <div class="process-step reveal reveal-delay-1">
+          <div class="process-step-number">1</div>
+          <h3>Заявка и бриф</h3>
+          <p>Обсуждаем задачу, площадку, формат и пожелания. Составляем техническое задание</p>
+        </div>
+
+        <div class="process-step reveal reveal-delay-2">
+          <div class="process-step-number">2</div>
+          <h3>Проектирование</h3>
+          <p>Разрабатываем схему расстановки камер, подбираем оборудование и готовим графику</p>
+        </div>
+
+        <div class="process-step reveal reveal-delay-3">
+          <div class="process-step-number">3</div>
+          <h3>Монтаж и тест</h3>
+          <p>Приезжаем заранее, монтируем оборудование, тестируем сигнал и проводим саундчек</p>
+        </div>
+
+        <div class="process-step reveal reveal-delay-4">
+          <div class="process-step-number">4</div>
+          <h3>Прямой эфир</h3>
+          <p>Запускаем трансляцию и контролируем каждый аспект эфира в реальном времени</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section faq" id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">FAQ</div>
+        <h2 class="section-title">Частые вопросы</h2>
+        <p class="section-subtitle">Ответы на самые популярные вопросы о наших трансляциях</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item reveal reveal-delay-1">
+          <button class="faq-question" aria-expanded="false">
+            За сколько дней нужно заказывать трансляцию?
+            <span class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Рекомендуем обращаться минимум за 10-14 рабочих дней до мероприятия. Это позволит нам качественно подготовиться: провести рекогносцировку площадки, подготовить графику и протестировать оборудование. Для срочных заказов — свяжитесь с нами, постараемся помочь.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-2">
+          <button class="faq-question" aria-expanded="false">
+            Предоставляете ли вы запись эфира?
+            <span class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Да! Запись эфира обязательно входит в пакеты «Про» и «Премиум». Вы получите полную запись в высоком качестве, которую сможете использовать для публикации, отчётов или архива. Для пакета «Старт» запись доступна как дополнительная опция.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-3">
+          <button class="faq-question" aria-expanded="false">
+            Работаете ли вы за пределами Красноярска?
+            <span class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Да, мы работаем по всему Красноярскому краю и готовы выехать в любой город. Транспортные расходы и логистика обсуждаются индивидуально. У нас есть опыт работы на удалённых площадках с автономным энергоснабжением.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-4">
+          <button class="faq-question" aria-expanded="false">
+            Можно ли добавить дополнительные услуги к пакету?
+            <span class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Конечно! Каждый пакет гибко адаптируется под ваши потребности. Вы можете добавить камеры, расширить графику, подключить дополнительные платформы для стриминга или заказать комментаторскую позицию. Свяжитесь с нами для индивидуального расчёта.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta" id="contact">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label" style="color: var(--color-accent-light); justify-content: center;">Начнём</div>
+        <h2 class="section-title">Готовы к трансляции?</h2>
+        <p class="section-subtitle">Расскажите о вашем мероприятии — мы подготовим индивидуальное предложение в течение 24 часов</p>
+      </div>
+
+      <div class="cta-buttons reveal reveal-delay-2">
+        <a href="tel:+79048950594" class="cta-btn-phone">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +7 (904) 895-05-94
+        </a>
+        <a href="https://t.me/vscl_tv" target="_blank" rel="noopener" class="cta-btn-tg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          @vscl_tv
+        </a>
+      </div>
+
+      <div class="cta-info reveal reveal-delay-3">
+        <span>📍 г. Красноярск</span>
+        <span>🕐 Пн–Вс: 9:00–21:00</span>
+        <span>⚡ Ответ за 24 часа</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-copy">© 2026 VSCL.RU — Все права защищены</div>
+        <div class="footer-links">
+          <a href="#">Политика конфиденциальности</a>
+          <a href="https://t.me/vscl_tv" target="_blank" rel="noopener">Telegram</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
