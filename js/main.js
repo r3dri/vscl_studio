@@ -203,13 +203,9 @@ hamburger.addEventListener('click', toggleMobileMenu);
     const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
     return cards[0].getBoundingClientRect().width + gap;
   };
-  // Сколько карточек видно на экране одновременно
   const visibleCount = () => Math.max(1, Math.round(track.clientWidth / step()));
-  // Сколько всего позиций прокрутки существует
   const positionsCount = () => Math.max(1, cards.length - visibleCount() + 1);
 
-  // Точки строятся по количеству ПОЗИЦИЙ, а не карточек;
-  // innerHTML = '' защищает от дублирования при повторном вызове
   const buildDots = () => {
     if (!dotsBox) return;
     dotsBox.innerHTML = '';
@@ -238,7 +234,6 @@ hamburger.addEventListener('click', toggleMobileMenu);
   if (nextBtn) nextBtn.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
   track.addEventListener('scroll', () => requestAnimationFrame(update), { passive: true });
 
-  // Пересчёт точек при изменении ширины экрана (дебонс)
   let resizeTimer;
   window.addEventListener('resize', () => {
     clearTimeout(resizeTimer);
