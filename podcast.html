@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VSCL Podcast — Подкаст-студия в Красноярске</title>
+  <meta name="description" content="Подкаст-студия VSCL в Красноярске: зоны для подкастов, лекций и Shorts с регулируемым светом и реквизитом. Запись видеоподкастов, трансляции, выездная запись — от 2 000 ₽/час.">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <meta name="theme-color" content="#0F0F11">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="img/logo.png" class="nav-logo-img" alt="VSCL">
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#services">Студия</a></li>
+        <li><a href="#packages">Пакеты</a></li>
+        <li><a href="#gallery">Галерея</a></li>
+        <li><a href="#equipment">Оборудование</a></li>
+        <li><a href="broadcast.html" class="nav-switch">Трансляции</a></li>
+        <li><a href="#contact" class="nav-cta">Обсудить проект</a></li>
+      </ul>
+
+      <button class="nav-hamburger" id="hamburger" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="nav-mobile" id="mobileMenu" role="dialog" aria-modal="true">
+      <a href="#services">Студия</a>
+      <a href="#packages">Пакеты</a>
+      <a href="#gallery">Галерея</a>
+      <a href="#equipment">Оборудование</a>
+      <a href="#faq">FAQ</a>
+      <a href="broadcast.html" class="nav-switch">Трансляции</a>
+      <a href="#contact" class="nav-mobile-cta">Обсудить проект</a>
+    </div>
+  </nav>
+
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img class="hero-video" src="img/podcast/hero-poster.jpg" alt="">
+      <div class="hero-overlay"></div>
+      <div class="noise-overlay"></div>
+    </div>
+
+    <div class="container hero-container">
+      <div class="hero-content reveal">
+        <div class="hero-badge">
+          <span class="live-dot"></span>
+          Подкаст-студия · Красноярск
+        </div>
+
+        <h1 class="hero-title">
+          Контент, который цепляет —<br>
+          <span class="text-accent">всё в одном пространстве</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Профессиональные зоны для подкастов, лекций и Shorts с регулируемым светом,
+          реквизитом и студийным звуком — от 2 000 ₽/час.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#packages" class="btn btn-primary">Выбрать пакет</a>
+          <a href="#gallery" class="btn btn-ghost">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Смотреть студию
+          </a>
+        </div>
+
+        <dl class="hero-stats">
+          <div class="stat-item">
+            <dt data-count="150">150+</dt>
+            <dd>выпусков записано</dd>
+          </div>
+          <div class="stat-item">
+            <dt data-count="40">40+</dt>
+            <dd>проектов запущено</dd>
+          </div>
+          <div class="stat-item">
+            <dt>от 2 000 ₽/час</dt>
+            <dd>аренда студии</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">Пространство, которое работает на вас</h2>
+        <p class="section-subtitle">Каждый проект для нас уникален. Мы адаптируемся под ваши нужды, предлагая персонализированные решения.</p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          </div>
+          <h3>Студия-конструктор</h3>
+          <p>Пространство подстраивается под любой формат записи: подкаст, лекция или Shorts. Легко меняем расстановку и свет под вашу конкретную задачу.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+          </div>
+          <h3>Оборудование ТВ-уровня</h3>
+          <p>Профессиональный арсенал: микрофоны Mackie и Audio-Technica, камеры Panasonic 4K и регулируемый свет в каждой зоне.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="2" x2="6" y2="5"/><line x1="10" y1="2" x2="10" y2="5"/><line x1="14" y1="2" x2="14" y2="5"/></svg>
+          </div>
+          <h3>Лаундж-зона</h3>
+          <p>Между дублями можно сыграть в PS5, выпить кофе и просто отдохнуть на диване. Лучшие идеи рождаются не под запись.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3"/></svg>
+          </div>
+          <h3>Подкасты, шоу и Shorts</h3>
+          <p>Запись от 2 до 4 спикеров на 1–3 камеры, работа оператора и чистый студийный звук в каждом дубле.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="2 12 5 12 7 5 10 19 13 9 15 15 17 12 22 12"/></svg>
+          </div>
+          <h3>Монтаж и тизеры</h3>
+          <p>Монтаж исходника, изготовление тизеров и нарезка Reels — чтобы контент продолжал работать после записи.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49"/><path d="M7.76 16.25a6 6 0 0 1 0-8.49"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M4.93 19.07a10 10 0 0 1 0-14.14"/></svg>
+          </div>
+          <h3>Онлайн-трансляции</h3>
+          <p>Профессиональная трансляция на площадки: оператор-режиссёр, мониторинг стабильности и запись эфира с передачей исходников.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+<section class="section packages" id="packages">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Пакеты и цены</h2>
+      <p class="section-subtitle">Фиксированная стоимость. Доплаты — только за дополнительные опции. Листайте карусель, чтобы сравнить все пакеты.</p>
+    </div>
+
+    <div class="packages-carousel reveal" id="packagesCarousel">
+      <div class="carousel-track">
+        <div class="package-card">
+          <div class="package-name">VSCL Space</div>
+          <div class="package-price">2 000 ₽/час</div>
+          <div class="package-desc">Аренда студии · минимальный заказ — 2 часа</div>
+          <ul class="package-features">
+            <li>1 час студийного времени</li>
+            <li>Стол, кресла и диван</li>
+            <li>Реквизит</li>
+            <li>Полный комплект света</li>
+          </ul>
+          <div class="package-note">
+            ВАЖНО: камеры и микрофоны не входят в этот пакет. Вы работаете со своей техникой или можете взять оборудование в аренду у нас. Дополнительное оборудование обсуждается отдельно.
+          </div>
+          <a href="#contact" class="btn btn-outline">Выбрать</a>
+        </div>
+
+        <div class="package-card">
+          <div class="package-name">VSCL Standart</div>
+          <div class="package-price">6 000 ₽/час</div>
+          <div class="package-desc">Запись видеоподкаста · минимум 1 час</div>
+          <ul class="package-features">
+            <li>60 минут чистой съемки</li>
+            <li>Запись на 1–3 камеры (Panasonic AG-CX10 — 2 шт, Panasonic 4K — 1 шт)</li>
+            <li>Съёмка от 2 до 4 спикеров</li>
+            <li>Работа оператора</li>
+            <li>2 студийных микрофона MACKIE EM-91C (для 2 спикеров) или наушники с микрофоном Audio-Technica (для 3–4 спикеров)</li>
+            <li>Передача всех отснятых материалов (видео + звук) после записи</li>
+          </ul>
+          <div class="package-options-title">Дополнительные опции</div>
+          <ul class="package-features">
+            <li>Монтаж подкаста: 2 500 ₽/час исходника</li>
+            <li>Изготовление тизера: 2 000 ₽</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline">Выбрать</a>
+        </div>
+
+        <div class="package-card popular">
+          <div class="package-badge">Хит</div>
+          <div class="package-name">VSCL Pro</div>
+          <div class="package-price">9 000 ₽/час</div>
+          <div class="package-desc">Видеоподкаст под ключ · минимальный заказ — 1 час</div>
+          <ul class="package-features">
+            <li>60 минут чистой съемки</li>
+            <li>Запись на 1–3 камеры (Panasonic AG-CX10 — 2 шт, Panasonic 4K — 1 шт)</li>
+            <li>Съёмка от 2 до 4 спикеров</li>
+            <li>Работа оператора</li>
+            <li>2 студийных микрофона MACKIE EM-91C (для 2 спикеров) или наушники с микрофоном Audio-Technica (для 3–4 спикеров)</li>
+            <li>Монтаж материала + тизер</li>
+          </ul>
+          <div class="package-options-title">Дополнительные опции</div>
+          <ul class="package-features">
+            <li>Продление съемки: 6 000 ₽/час</li>
+            <li>Нарезка Reels: 1 000 ₽/шт</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Выбрать</a>
+        </div>
+
+        <div class="package-card">
+          <div class="package-name">VSCL Live</div>
+          <div class="package-price">8 000 ₽/час</div>
+          <div class="package-desc">Онлайн-трансляция · + 2 000 ₽ техническая проверка · минимум 1 час эфира</div>
+          <ul class="package-features">
+            <li>Профессиональная трансляция на 1 платформу</li>
+            <li>Работа оператора-режиссера</li>
+            <li>1–3 камеры + студийный свет + звук</li>
+            <li>Техническая проверка и подготовка перед эфиром</li>
+            <li>Мониторинг стабильности трансляции</li>
+            <li>Запись эфира и передача исходников</li>
+          </ul>
+          <div class="package-options-title">Дополнительные опции</div>
+          <ul class="package-features">
+            <li>Мультитрансляция на несколько платформ: 1 000 ₽</li>
+            <li>Визуальная графика (плашки, титры, оформление): рассчитаем индивидуально после утверждения ТЗ</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline">Выбрать</a>
+        </div>
+
+        <div class="package-card">
+          <div class="package-name">VSCL Mobile</div>
+          <div class="package-price">8 000 ₽/час</div>
+          <div class="package-desc">Запись на вашей локации · минимальный заказ — 2 часа</div>
+          <ul class="package-features">
+            <li>1–3 камеры Panasonic + студийные микрофоны + 2 базовых источника света</li>
+            <li>Работа оператора-режиссера</li>
+            <li>Используем имеющуюся обстановку и организуем зону записи из вашего пространства</li>
+            <li>Полная настройка и проверка оборудования включены в первый час (технический час)</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline">Выбрать</a>
+        </div>
+      </div>
+
+      <button class="carousel-btn prev" type="button" aria-label="Предыдущий пакет">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="carousel-btn next" type="button" aria-label="Следующий пакет">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+      <div class="carousel-dots"></div>
+    </div>
+  </div>
+</section>
+
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">Студия-конструктор</h2>
+        <p class="section-subtitle">Одно пространство — десятки сценариев. Мы меняем расстановку мебели и цвет света под формат вашей записи: от соло-подкаста до ток-шоу.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <figure class="gallery-item reveal">
+          <img src="img/podcast/gallery-podcast-classic.jpg" alt="Зона записи подкаста на двух человек с синим контровым светом" loading="lazy">
+          <figcaption>Классическая расстановка на двоих</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="img/podcast/gallery-podcast-solo.jpg" alt="Крупный план рабочего места для записи соло-подкаста или Shorts" loading="lazy">
+          <figcaption>Соло-запись и Shorts: акцентный свет и крупный план</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="img/podcast/gallery-podcast-van.jpg" alt="Вид на студию сверху: организация пространства и коммутация" loading="lazy">
+          <figcaption>Организация пространства под четырех человек</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="img/podcast/gallery-control-room.jpg" alt="Рабочее место режиссера: видеомикшер AVMATRIX и звуковой пульт" loading="lazy">
+          <figcaption>Аппаратная: видеомикшер и контроль звука в реальном времени</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="img/podcast/gallery-lounge.jpg" alt="Лаундж-зона с диваном и креслом под красным светом для неформальных бесед" loading="lazy">
+          <figcaption>Лаундж: неформальная обстановка для больших компаний</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="img/podcast/gallery-.jpg" alt="Лаундж-зона с диваном и креслом под красным светом для неформальных бесед" loading="lazy">
+          <figcaption>Гримерка</figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+  <section class="section equipment" id="equipment">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">Оборудование ТВ-уровня</h2>
+        <p class="section-subtitle">Профессиональный арсенал: микрофоны Mackie и Audio-Technica, камеры Panasonic 4K, регулируемый свет.</p>
+      </div>
+
+
+        <div class="equipment-content reveal">
+          <div class="eq-category">
+            <div class="eq-category-icon">
+              <img src="img/tech/mic.png" loading="lazy" alt="">
+            </div>
+            <div>
+              <h3>Микрофоны и звук</h3>
+              <p>MACKIE EM-91C × 2 — студийные микрофоны для двух спикеров</p>
+              <p>Наушники с микрофоном Audio-Technica — решение для 3–4 спикеров</p>
+            </div>
+          </div>
+
+          <div class="eq-category">
+            <div class="eq-category-icon">
+              <img src="img/tech/camera.png" loading="lazy" alt="">
+            </div>
+            <div>
+              <h3>Камеры</h3>
+              <p>Panasonic AG-CX10 × 2 — основная съёмка</p>
+              <p>Panasonic 4K × 1 — дополнительный ракурс</p>
+            </div>
+          </div>
+
+          <div class="eq-category">
+            <div class="eq-category-icon">
+              <img src="img/tech/mixer.png" loading="lazy" alt="">
+            </div>
+            <div>
+              <h3>Свет и реквизит</h3>
+              <p>Полный комплект света с регулировкой под каждую зону</p>
+              <p>Реквизит, стол, кресла и диван — всё готово к кадру</p>
+            </div>
+          </div>
+
+          <div class="eq-category">
+            <div class="eq-category-icon">
+              <img src="img/tech/network.png" loading="lazy" alt="">
+            </div>
+            <div>
+              <h3>Онлайн-трансляции</h3>
+              <p>Трансляция на площадки и мониторинг стабильности сигнала</p>
+              <p>Мультитрансляция на несколько платформ — как дополнительная опция</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section process" id="process">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">Как мы работаем</h2>
+        <p class="section-subtitle">Четыре шага от заявки до готовых материалов</p>
+      </div>
+
+      <div class="process-steps">
+        <div class="process-step reveal">
+          <div class="step-number">01</div>
+          <h3>Заявка и брифинг</h3>
+          <p>Обсуждаем формат и задачу, подбираем зону: подкаст, лекция, Shorts или трансляция.</p>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="step-number">02</div>
+          <h3>Подготовка студии</h3>
+          <p>Меняем расстановку и свет под вашу задачу, настраиваем микрофоны и камеры, проводим проверку.</p>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="step-number">03</div>
+          <h3>Запись</h3>
+          <p>Оператор ведёт камеры и звук, режиссёр следит за дублями. Вы сосредоточены на контенте.</p>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="step-number">04</div>
+          <h3>Передача материалов</h3>
+          <p>Отдаём все исходники после записи. Монтаж, тизер и нарезка Reels — по желанию, отдельными опциями.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section faq" id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">Частые вопросы</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            Что входит в аренду студии «VSCL Space»?
+            <span class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              В пакет входят студийное время, стол, кресла и диван, реквизит и полный комплект света. Камеры и микрофоны в этот пакет не входят: вы работаете со своей техникой или берёте оборудование в аренду у нас — дополнительное оборудование обсуждается отдельно.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            Почему первый час пакета «VSCL Mobile» называется техническим?
+            <span class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              На вашей локации мы организуем зону записи из вашего пространства: полная настройка и проверка камер, микрофонов и света включены в первый час. Дальше идёт чистое съёмочное время.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            Можно ли заказать монтаж или тизер, если мы сняли сами?
+            <span class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Да. Монтаж подкаста — 2 500 ₽/час исходника, изготовление тизера — 2 000 ₽, нарезка Reels — 1 000 ₽/шт. Эти работы доступны как опции внутри пакетов и как отдельные услуги.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            Как устроена трансляция на несколько платформ?
+            <span class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              В пакете «VSCL Live» трансляция идёт на одну платформу и включает техническую проверку перед эфиром. Мультитрансляция подключается опцией за 1 000 ₽, а визуальная графика (плашки, титры, оформление) рассчитывается индивидуально после утверждения ТЗ.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta" id="contact">
+    <div class="container">
+      <div class="cta-content reveal">
+        <h2 class="section-title">Готовы записать выпуск?</h2>
+        <p class="section-subtitle">Расскажите о проекте — подберём зону и пакет, пришлём смету и свободные слоты в течение 24 часов</p>
+
+        <div class="cta-buttons">
+          <a href="tel:+79048950594" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 12.84 12.84 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +7 (904) 895-05-94
+          </a>
+          <a href="https://t.me/vscl_tv" target="_blank" rel="noopener" class="btn btn-outline">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0 12 12 0 0 0 11.944 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            @vscl_tv
+          </a>
+        </div>
+
+        <div class="cta-info">
+          <span>г. Красноярск</span>
+          <span>Пн–Вс: 9:00–21:00</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-copy">© 2026 VSCL.RU</div>
+        <div class="footer-links">
+          <a href="index.html">Выбор направления</a>
+          <a href="broadcast.html">Трансляции</a>
+          <a href="https://t.me/vscl_tv" target="_blank" rel="noopener">Telegram</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

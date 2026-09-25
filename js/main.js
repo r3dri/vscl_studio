@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
       nav.classList.remove('scrolled');
     }
     lastScroll = currentScroll;
+    initPackagesCarousel();
   };
 
   window.addEventListener('scroll', handleNavScroll, { passive: true });
@@ -184,5 +185,68 @@ hamburger.addEventListener('click', toggleMobileMenu);
       particlesContainer.appendChild(particle);
     }
   }
+
+  function initPackagesCarousel() {
+  const root = document.getElementById('packagesCarousel');
+  if (!root) return;
+
+  const track = root.querySelector('.carousel-track');
+  const prevBtn = root.querySelector('.carousel-btn.prev');
+  const nextBtn = root.querySelector('.carousel-btn.next');
+  const dotsBox = root.querySelector('.carousel-dots');
+  if (!track || !track.children.length) return;
+
+  const cards = Array.from(track.children);
+  let dots = [];
+
+  const step = () => {
+    const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+    return cards[0].getBoundingClientRect().width + gap;
+  };
+  // Сколько карточек видно на экране одновременно
+  const visibleCount = () => Math.max(1, Math.round(track.clientWidth / step()));
+  // Сколько всего позиций прокрутки существует
+  const positionsCount = () => Math.max(1, cards.length - visibleCount() + 1);
+
+  // Точки строятся по количеству ПОЗИЦИЙ, а не карточек;
+  // innerHTML = '' защищает от дублирования при повторном вызове
+  const buildDots = () => {
+    if (!dotsBox) return;
+    dotsBox.innerHTML = '';
+    dots = [];
+    for (let i = 0; i < positionsCount(); i++) {
+      const dot = document.createElement('button');
+      dot.className = 'carousel-dot';
+      dot.type = 'button';
+      dot.setAttribute('aria-label', 'Позиция ' + (i + 1));
+      dot.addEventListener('click', () => track.scrollTo({ left: i * step(), behavior: 'smooth' }));
+      dotsBox.appendChild(dot);
+      dots.push(dot);
+    }
+  };
+
+  const currentIndex = () => Math.min(Math.round(track.scrollLeft / step()), positionsCount() - 1);
+
+  const update = () => {
+    const i = currentIndex();
+    dots.forEach((d, k) => d.classList.toggle('active', k === i));
+    if (prevBtn) prevBtn.disabled = track.scrollLeft <= 4;
+    if (nextBtn) nextBtn.disabled = track.scrollLeft >= track.scrollWidth - track.clientWidth - 4;
+  };
+
+  if (prevBtn) prevBtn.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+  if (nextBtn) nextBtn.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+  track.addEventListener('scroll', () => requestAnimationFrame(update), { passive: true });
+
+  // Пересчёт точек при изменении ширины экрана (дебонс)
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => { buildDots(); update(); }, 150);
+  });
+
+  buildDots();
+  update();
+}
 
 });
