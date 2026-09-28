@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
       nav.classList.remove('scrolled');
     }
     lastScroll = currentScroll;
-    initPackagesCarousel();
   };
 
   window.addEventListener('scroll', handleNavScroll, { passive: true });
@@ -111,6 +110,7 @@ hamburger.addEventListener('click', toggleMobileMenu);
 
     counters.forEach(counter => {
       const target = parseInt(counter.getAttribute('data-count'));
+      const suffix = counter.textContent.replace(/[0-9]+/, '');
       const duration = 2000;
       const startTime = performance.now();
 
@@ -122,7 +122,7 @@ hamburger.addEventListener('click', toggleMobileMenu);
         const easedProgress = easeOutQuart(progress);
         const current = Math.round(easedProgress * target);
 
-        counter.textContent = current + '+';
+        counter.textContent = current + suffix;
 
         if (progress < 1) {
           requestAnimationFrame(updateCounter);
@@ -226,12 +226,18 @@ hamburger.addEventListener('click', toggleMobileMenu);
   const update = () => {
     const i = currentIndex();
     dots.forEach((d, k) => d.classList.toggle('active', k === i));
-    if (prevBtn) prevBtn.disabled = track.scrollLeft <= 4;
-    if (nextBtn) nextBtn.disabled = track.scrollLeft >= track.scrollWidth - track.clientWidth - 4;
   };
 
-  if (prevBtn) prevBtn.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
-  if (nextBtn) nextBtn.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+  const maxScroll = () => track.scrollWidth - track.clientWidth;
+
+  if (prevBtn) prevBtn.addEventListener('click', () => {
+    if (track.scrollLeft <= 4) track.scrollTo({ left: maxScroll(), behavior: 'smooth' });
+    else track.scrollBy({ left: -step(), behavior: 'smooth' });
+  });
+  if (nextBtn) nextBtn.addEventListener('click', () => {
+    if (track.scrollLeft >= maxScroll() - 4) track.scrollTo({ left: 0, behavior: 'smooth' });
+    else track.scrollBy({ left: step(), behavior: 'smooth' });
+  });
   track.addEventListener('scroll', () => requestAnimationFrame(update), { passive: true });
 
   let resizeTimer;
@@ -243,5 +249,23 @@ hamburger.addEventListener('click', toggleMobileMenu);
   buildDots();
   update();
 }
+
+  initPackagesCarousel();
+
+  const hc = document.querySelector('.hero-content .hero-title');
+  if (hc) {
+    const tc = document.createElement('div');
+    tc.className = 'hero-timecode';
+    tc.setAttribute('aria-hidden', 'true');
+    const t0 = Date.now();
+    const pad = n => String(n).padStart(2, '0');
+    const tick = () => {
+      const s = Math.floor((Date.now() - t0) / 1000);
+      tc.innerHTML = '<b>●</b> ' + pad(Math.floor(s / 3600)) + ':' + pad(Math.floor(s / 60) % 60) + ':' + pad(s % 60);
+    };
+    tick();
+    hc.parentNode.insertBefore(tc, hc);
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) setInterval(tick, 1000);
+  }
 
 });

@@ -1,0 +1,204 @@
+/* VSCL visual upgrade — подключается ПОСЛЕ styles.css */
+:root {
+  --c-bg: #0C0E12;
+  --c-bg-elevated: #13161C;
+  --c-bg-card: #1A1E26;
+  --c-text: #F2F0EB;
+  --c-text-muted: #9AA1AE;
+  --c-accent: #FF3B30;
+  --c-accent-hover: #FF5E55;
+  --c-on-accent: #fff;
+  --c-border: rgba(242, 240, 235, 0.10);
+  --ff-display: 'Unbounded', 'Onest', system-ui, sans-serif;
+  --ff-sans: 'Onest', system-ui, sans-serif;
+  --radius: 4px;
+  --fs-2xl: clamp(2.4rem, 1.2rem + 5.2vw, 5rem);
+  --fs-xl: clamp(1.6rem, 1.1rem + 2.2vw, 2.6rem);
+}
+/* Подкаст-страница: светло-салатовый акцент */
+body.page-podcast {
+  --c-accent: #B8F27C;
+  --c-accent-hover: #CDF79F;
+  --c-on-accent: #10200A;
+}
+
+body { font-family: var(--ff-sans); font-feature-settings: 'ss01', 'tnum' 0; }
+p { max-width: 68ch; }
+
+/* Типографика: display-шрифт только для заголовков и цифр */
+.hero-title, .section-title, .gate-title, .package-price, .stat-item dt,
+.step-number, .gate-card-content h2 {
+  font-family: var(--ff-display);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+}
+.hero-title { line-height: 1.02; }
+.hero-title .text-accent { display: block; color: var(--c-accent); }
+.section-title { max-width: 18ch; text-wrap: balance; }
+.cta .section-title { max-width: none; }
+
+/* Единая левая выравнивающая сетка заголовков */
+.section-header,
+.packages .section-header, .portfolio .section-header, .team .section-header,
+.process .section-header, .faq .section-header, .cta .section-header { text-align: left; }
+.packages .section-subtitle, .portfolio .section-subtitle, .team .section-subtitle,
+.process .section-subtitle, .cta .section-subtitle { margin-inline: 0; }
+.section-subtitle { max-width: 56ch; }
+.section { padding: clamp(4rem, 8vw, 7rem) 0; }
+.faq .section-header, .faq-list { max-width: 760px; }
+.faq-list { margin-inline: 0; }
+
+/* Убираем капслок-«подписи» */
+.stat-item dd, .package-name, .package-options-title, .team-role, .package-badge {
+  text-transform: none; letter-spacing: 0;
+}
+
+/* Кнопки */
+.btn { border-radius: var(--radius); padding: 15px 26px; }
+.btn-primary { background: var(--c-accent); color: var(--c-on-accent); }
+.btn-primary:hover { background: var(--c-accent-hover); }
+.btn-ghost { color: var(--c-text); }
+:focus-visible { outline: 2px solid var(--c-accent); outline-offset: 3px; }
+
+/* Навигация */
+.nav.scrolled, .nav.menu-active { background: rgba(12, 14, 18, 0.88); }
+.nav-cta { background: var(--c-accent) !important; border-color: var(--c-accent) !important; color: var(--c-on-accent) !important; }
+.nav-cta:hover { background: var(--c-accent-hover) !important; }
+.nav-links a { position: relative; }
+.nav-links a:not(.nav-cta):hover { color: var(--c-text); }
+.nav-switch { border: 1px solid currentColor; padding: 6px 14px; border-radius: 100px; }
+
+/* HERO — «эфирный» экран: индикатор ON AIR + таймкод */
+.hero { min-height: 100svh; align-items: flex-end; padding-bottom: clamp(3rem, 8vh, 6rem); }
+.hero-video { opacity: 0.4; filter: saturate(0.85) contrast(1.05); }
+.hero-overlay {
+  background:
+    linear-gradient(to right, rgba(12,14,18,0.92) 0%, rgba(12,14,18,0.55) 55%, rgba(12,14,18,0.25) 100%),
+    linear-gradient(to top, var(--c-bg) 2%, transparent 40%);
+}
+.hero-content { max-width: 860px; }
+.hero-badge {
+  background: var(--c-accent); color: var(--c-on-accent);
+  border: 0; border-radius: 3px; padding: 6px 12px; font-weight: 700;
+}
+.hero-badge .live-dot { background: var(--c-on-accent); }
+.hero-timecode {
+  font-variant-numeric: tabular-nums; font-family: var(--ff-display); font-size: var(--fs-xs);
+  color: var(--c-text-muted); margin: -8px 0 24px; display: flex; gap: 10px; align-items: center;
+}
+.hero-timecode b { color: var(--c-accent); font-weight: 700; }
+.hero-subtitle { color: #C9CDD6; }
+.hero-stats { gap: clamp(24px, 5vw, 64px); }
+.stat-item dt { font-size: var(--fs-lg); }
+.stat-item dd { font-size: var(--fs-sm); margin-top: 6px; }
+
+/* Услуги — список со строками вместо одинаковых карточек */
+.services-grid { gap: 0 64px; grid-template-columns: repeat(2, 1fr); }
+.service-card {
+  background: none; border: 0; border-top: 1px solid var(--c-border);
+  border-radius: 0; padding: 32px 0; display: grid;
+  grid-template-columns: 44px 1fr; column-gap: 24px;
+}
+.service-card:hover { border-color: var(--c-accent); }
+.service-icon { grid-row: span 2; margin: 2px 0 0; width: 36px; height: 36px; }
+.service-card h3 { font-size: var(--fs-base); margin-bottom: 6px; }
+
+/* Пакеты */
+.packages { background: var(--c-bg-elevated); }
+.package-card { border-radius: var(--radius); background: var(--c-bg-card); padding: 36px 32px; }
+.package-price { font-size: clamp(1.5rem, 1.1rem + 1.4vw, 2.1rem); margin-bottom: 6px; }
+.package-name { font-size: var(--fs-sm); font-weight: 600; color: var(--c-text); margin-bottom: 10px; }
+.package-card.popular { background: var(--c-accent); border-color: var(--c-accent); color: var(--c-on-accent); }
+.package-card.popular .package-name, .package-card.popular .package-price { color: var(--c-on-accent); }
+.package-card.popular .package-desc, .package-card.popular .package-features li,
+.package-card.popular .package-options-title { color: rgba(0,0,0,0.72); }
+.package-card.popular .package-desc { border-color: rgba(0,0,0,0.18); }
+.package-card.popular .package-features li::before { background: var(--c-on-accent); }
+.package-card.popular .btn-primary { background: var(--c-on-accent); color: var(--c-accent); }
+.package-card.popular .package-badge { background: var(--c-on-accent); color: var(--c-accent); }
+.package-note { border-radius: var(--radius); }
+.package-features li::before { border-radius: 1px; width: 8px; height: 2px; top: 19px; }
+
+/* Кейсы, техника, галерея */
+.portfolio-card, .gallery-item, .equipment-visual, .faq-item, .team-card { border-radius: var(--radius); }
+.portfolio-card:hover { border-color: var(--c-accent); }
+.portfolio-tag { background: none; padding: 0; color: var(--c-accent); }
+.portfolio-meta span + span::before { content: ''; display: inline-block; width: 4px; height: 4px; background: var(--c-text-muted); border-radius: 50%; margin-right: 16px; vertical-align: middle; }
+.gallery-item figcaption { padding: 28px 16px 14px; font-size: var(--fs-sm); }
+.eq-category { padding-top: 24px; border-top: 1px solid var(--c-border); }
+.eq-category-icon { background: transparent; }
+
+/* Команда — круглые портреты у каждого */
+.team-card { background: none; border: 0; padding: 0; text-align: center; }
+.team-card:hover { transform: none; border: 0; }
+.team-avatar {
+  width: 120px; height: 120px; aspect-ratio: 1 / 1; border-radius: 50%;
+  margin: 0 auto 20px; border: 2px solid var(--c-border);
+}
+.team-card:hover .team-avatar { border-color: var(--c-accent); }
+.team-avatar img { border-radius: 50%; }
+.team-role { color: var(--c-accent); margin-bottom: 8px; display: block; }
+.team-card p { margin-inline: auto; }
+.team-grid { grid-template-columns: repeat(3, 1fr); gap: 48px 24px; }
+
+/* Процесс — это реальная последовательность, поэтому нумерация уместна */
+.process-step { border-top: 2px solid var(--c-border); padding-top: 20px; }
+.process-step:last-child { border-top-color: var(--c-accent); }
+.step-number {
+  font-size: var(--fs-xl); color: var(--c-accent); text-shadow: none; margin-bottom: 14px;
+}
+
+/* FAQ, CTA, footer */
+.faq-item { background: none; border-color: var(--c-border); }
+.faq-item.active { background: var(--c-bg-card); }
+.cta { background: var(--c-bg); border-top: 1px solid var(--c-border); }
+.cta-content { text-align: left; margin: 0; max-width: 720px; }
+.cta-buttons, .cta-info { justify-content: flex-start; }
+.footer { padding: 32px 0; }
+
+/* Карусель */
+.carousel-btn { background: var(--c-text); color: var(--c-bg); border: 0; }
+.carousel-btn:hover { background: var(--c-accent); color: var(--c-on-accent); }
+
+/* Reveal — единый спокойный вход, без «каждой карточке по анимации» */
+.reveal { transform: translateY(12px); transition: opacity .5s ease, transform .5s ease; }
+
+/* Входная страница */
+.gate-title { font-size: var(--fs-2xl); max-width: 14ch; }
+.gate-title .text-accent { display: block; }
+.gate-card { border-radius: var(--radius); }
+.gate-card:hover { transform: none; border-color: var(--c-accent); }
+.gate-bg { opacity: 0.4; }
+.gate-card::after { background: linear-gradient(to top, rgba(12,14,18,0.95) 10%, rgba(12,14,18,0.1)); }
+.gate-badge { background: var(--c-accent); color: var(--c-on-accent); border: 0; border-radius: 3px; }
+.gate-badge .live-dot { background: var(--c-on-accent); }
+.gate-cta { border-bottom: 2px solid var(--c-accent); padding-bottom: 2px; color: var(--c-text); }
+.gate-card:hover .gate-cta { text-decoration: none; }
+
+@media (max-width: 1024px) { .services-grid { grid-template-columns: 1fr; } }
+@media (max-width: 768px) {
+  .team-grid { grid-template-columns: repeat(2, 1fr); max-width: none; gap: 32px 16px; }
+  .team-avatar { width: 96px; height: 96px; }
+  .hero { align-items: center; }
+  .nav-switch { border: 0; padding: 12px 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+
+/* Подкаст: перекрашиваем места, где красный был прописан жёстко */
+body.page-podcast .package-note {
+  background: rgba(184, 242, 124, 0.08);
+  border-color: rgba(184, 242, 124, 0.3);
+}
+body.page-podcast .package-card.popular .package-note {
+  background: rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.25);
+  color: rgba(0, 0, 0, 0.75);
+}
+body.page-podcast .portfolio-tag { background: none; }
+
+/* Стрелки карусели всегда активны */
+.carousel-btn:disabled { opacity: 1; pointer-events: auto; }
